@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CountdownTimer from "./CountdownTimer";
 import VideoPlayer from "./VideoPlayer";
 
@@ -38,6 +38,7 @@ export default function HomeTwo() {
       <img
         style={{ maxHeight: "150px" }}
         src="https://upload.wikimedia.org/wikipedia/commons/3/38/Game_Grumps_logo_2018.png"
+        alt="Game Grumps Logo"
       ></img>
       <h1>Sleep Timer App</h1>
       <br></br>

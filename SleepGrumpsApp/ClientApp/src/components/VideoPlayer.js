@@ -22,13 +22,13 @@ export default function VideoPlayer({ ...props }) {
 
     const randomVideo = Math.floor(Math.random() * 5);
 
-    // fetch(webUrl)
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     setVideoId(data.items[randomVideo].id.videoId);
-    //   });
-    setVideoId(null);
-    setVideoId("8AdocwLhADo");
+    fetch(webUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        setVideoId(data.items[randomVideo].id.videoId);
+      });
+    // setVideoId(null);
+    // setVideoId("8AdocwLhADo");
   };
 
   const handleOnReady = (event) => {

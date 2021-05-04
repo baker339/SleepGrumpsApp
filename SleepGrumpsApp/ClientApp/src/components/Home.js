@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import HomeTwo from "./HomeTwo";
 
 export class Home extends Component {
