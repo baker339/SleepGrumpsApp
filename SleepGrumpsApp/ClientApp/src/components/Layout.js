@@ -7,7 +7,7 @@ export class Layout extends Component {
 
   render () {
     return (
-      <div>
+      <div style={{"paddingTop": "100px"}}>
         {false && <NavMenu /> }
         <Container>
           {this.props.children}

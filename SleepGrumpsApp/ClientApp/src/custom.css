@@ -4,11 +4,36 @@ a {
 }
 
 code {
-  color: #E01A76;
+  color: #e01a76;
 }
 
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+}
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp2274538.jpg");
+  text-shadow: darkcyan;
+}
+
+.youtube {
+  animation: youtube-animation 1.5s ease-out;
+}
+
+@keyframes youtube-animation {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.home-two-container {
+  text-align: center;
+  backdrop-filter: blur(17px) brightness(1.2);
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
