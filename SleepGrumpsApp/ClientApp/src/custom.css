@@ -51,6 +51,6 @@ img {
     transform: translate(0, -500px);
   }
   80% {
-    transform: translate(0px, 50px);
+    transform: translate(0px, 50px) scale(1, 0.6);
   }
 }
