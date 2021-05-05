@@ -68,8 +68,13 @@ export default function HomeTwo() {
       {showVideoPlayer && <VideoPlayer autoPlay={autoPlay} />}
       {!showVideoPlayer && (
         <div>
-          <h4>Input a time to begin, then press start!</h4>
-          <h4>Press Clear to reset</h4>
+          <h4>
+            Input a time to begin, then press{" "}
+            <span style={{ color: "#3a80c7" }}>Start!</span>
+          </h4>
+          <h4>
+            Press <span style={{ color: "#3a80c7" }}>Clear</span> to reset
+          </h4>
         </div>
       )}
     </div>
