@@ -27,10 +27,11 @@ RUN dotnet publish "SleepGrumpsApp.csproj" -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim
 
 # Expose port 80 to your local machine so you can access the app.
-EXPOSE 80
+# EXPOSE 80
 
 # Copy the published app to this new runtime-only container.
 COPY --from=build /app/publish .
 
 # To run the app, run `dotnet sample-app.dll`, which we just copied over.
-ENTRYPOINT ["dotnet", "SleepGrumpsApp.dll"]
+# ENTRYPOINT ["dotnet", "SleepGrumpsApp.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet SleepGrumpsApp.dll
