@@ -13,6 +13,33 @@ code {
   border-color: #1861ac;
 }
 
+.btn:hover {
+  animation: wiggle 0.8s ease-in-out forwards;
+}
+
+@keyframes wiggle {
+  10%,
+  90% {
+    transform: rotate(-10deg);
+  }
+
+  20%,
+  80% {
+    transform: rotate(10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(-5deg);
+  }
+
+  40%,
+  60% {
+    transform: rotate(5deg);
+  }
+}
+
 body {
   background-image: url("https://wallpapercave.com/wp/wp2274538.jpg");
   text-shadow: darkcyan;

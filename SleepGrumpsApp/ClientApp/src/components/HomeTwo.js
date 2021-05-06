@@ -31,10 +31,7 @@ export default function HomeTwo() {
   };
 
   return (
-    <div
-      className={"home-two-container"}
-      //   style={{ textAlign: "center", backdropFilter: "blur(18px)" }}
-    >
+    <div className={"home-two-container"}>
       <img
         style={{ maxHeight: "150px" }}
         src="https://upload.wikimedia.org/wikipedia/commons/3/38/Game_Grumps_logo_2018.png"
