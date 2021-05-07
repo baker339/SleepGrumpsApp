@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
-import { Container } from 'reactstrap';
-import { NavMenu } from './NavMenu';
+import React, { Component } from "react";
+import { Container } from "reactstrap";
+import { NavMenu } from "./NavMenu";
 
 export class Layout extends Component {
   static displayName = Layout.name;
 
-  render () {
+  render() {
     return (
-      <div style={{"paddingTop": "100px"}}>
-        {false && <NavMenu /> }
-        <Container>
-          {this.props.children}
-        </Container>
+      <div style={{ paddingTop: "100px" }}>
+        {/* <NavMenu /> */}
+        <Container>{this.props.children}</Container>
       </div>
     );
   }
