@@ -33,7 +33,7 @@ export default function HomeTwo() {
   return (
     <div className={"home-two-container"}>
       <img
-        style={{ maxHeight: "150px" }}
+        style={{ maxHeight: "10rem" }}
         src="https://upload.wikimedia.org/wikipedia/commons/3/38/Game_Grumps_logo_2018.png"
         alt="Game Grumps Logo"
       ></img>

@@ -33,7 +33,7 @@ export default function CountdownTimer({ expiryTimestamp, ...props }) {
     restart(time);
   };
 
-  const timerFontSize = isRunning ? "24px" : "100px";
+  const timerFontSize = isRunning ? "2rem" : "4rem";
 
   return (
     <div style={{ textAlign: "center" }}>
