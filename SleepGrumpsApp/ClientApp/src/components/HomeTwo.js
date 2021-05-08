@@ -33,7 +33,7 @@ export default function HomeTwo() {
   return (
     <div className={"home-two-container"}>
       <img
-        style={{ maxHeight: "10rem" }}
+        style={{ width: "50%", height: "undefined", justifyContent: "center" }}
         src="https://upload.wikimedia.org/wikipedia/commons/3/38/Game_Grumps_logo_2018.png"
         alt="Game Grumps Logo"
       ></img>
@@ -42,7 +42,10 @@ export default function HomeTwo() {
       {!showVideoPlayer && (
         <>
           <h3>Enter a time in minutes</h3>
-          <div className="form-group" style={{ margin: "auto", width: "10%" }}>
+          <div
+            className="form-group"
+            style={{ margin: "auto", width: "100px" }}
+          >
             <input
               className="form-control"
               value={timeInput}
