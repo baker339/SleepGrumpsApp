@@ -11,10 +11,12 @@ code {
   color: #fff;
   background-color: #3a80c7;
   border-color: #1861ac;
+  z-index: 2;
 }
 
 .btn:hover {
   animation: wiggle 0.8s ease-in-out forwards;
+  box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes wiggle {
@@ -48,6 +50,7 @@ html {
 body {
   background-image: url("https://wallpapercave.com/wp/wp2274538.jpg");
   text-shadow: darkcyan;
+  perspective: 1000px;
 }
 
 .youtube {
@@ -72,10 +75,14 @@ body {
   padding-top: 5%;
   padding-bottom: 5%;
   border-radius: 30px;
+  box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  transform-style: preserve-3d;
 }
 
 img {
   animation: logo 0.5s ease-in-out;
+  z-index: 2;
 }
 
 @keyframes logo {
