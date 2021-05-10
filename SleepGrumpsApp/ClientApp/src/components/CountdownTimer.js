@@ -33,6 +33,16 @@ export default function CountdownTimer({ expiryTimestamp, ...props }) {
     restart(time);
   };
 
+  const handlePause = () => {
+    props.handleTimerPause();
+    pause();
+  };
+
+  const handleResume = () => {
+    props.handleTimerResume();
+    resume();
+  };
+
   const timerFontSize = isRunning ? "2rem" : "4rem";
 
   return (
@@ -52,16 +62,16 @@ export default function CountdownTimer({ expiryTimestamp, ...props }) {
       {/* <p>{isRunning ? "Running" : "Not running"}</p> */}
       <span style={{ padding: "10px" }}>
         <button className="btn btn-primary" onClick={handleStart}>
-          Start
+          {props.startText}
         </button>
       </span>
       <span style={{ padding: "10px" }}>
-        <button className="btn btn-primary" onClick={pause}>
+        <button className="btn btn-primary" onClick={handlePause}>
           Pause
         </button>
       </span>
       <span style={{ padding: "10px" }}>
-        <button className="btn btn-primary" onClick={resume}>
+        <button className="btn btn-primary" onClick={handleResume}>
           Resume
         </button>
       </span>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 
+var videoPlayerEvent = null;
 export default function VideoPlayer({ ...props }) {
   const [videoId, setVideoId] = useState(null);
 
@@ -33,7 +34,16 @@ export default function VideoPlayer({ ...props }) {
 
   const handleOnReady = (event) => {
     event.target.playVideo();
+    videoPlayerEvent = event;
   };
+
+  useEffect(() => {
+    if (videoPlayerEvent && videoId) {
+      props.pauseVideo
+        ? videoPlayerEvent.target.pauseVideo()
+        : videoPlayerEvent.target.playVideo();
+    }
+  }, [props.pauseVideo]);
 
   const opts = {
     playerVars: {

@@ -30,6 +30,6 @@ export class Home extends Component {
   }
 
   render() {
-    return <HomeTwo />;
+    return <HomeTwo handleClear={this.forceUpdate} />;
   }
 }

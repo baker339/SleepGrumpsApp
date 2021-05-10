@@ -3,10 +3,12 @@ import CountdownTimer from "./CountdownTimer";
 import VideoPlayer from "./VideoPlayer";
 
 export default function HomeTwo() {
-  const [timeInput, setTimeInput] = useState(null);
+  const [timeInput, setTimeInput] = useState(0);
   const [expiryTimestamp, setExpiryTimeStamp] = useState(null);
   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
   const [autoPlay, setAutoPlay] = useState(false);
+  const [displayHelpText, setDisplayHelpText] = useState(false);
+  const [pauseVideo, setPauseVideo] = useState(false);
 
   const handleTimerInput = (e) => {
     setTimeInput(e.target.value);
@@ -16,6 +18,7 @@ export default function HomeTwo() {
   };
 
   const handleClearValue = () => {
+    setPauseVideo(true);
     setTimeInput(0);
     setAutoPlay(false);
     setShowVideoPlayer(false);
@@ -26,9 +29,25 @@ export default function HomeTwo() {
   };
 
   const handleTimerStart = () => {
-    setAutoPlay(true);
-    setShowVideoPlayer(true);
+    if (timeInput > 0 && timeInput <= 120) {
+      setAutoPlay(true);
+      setShowVideoPlayer(true);
+      setDisplayHelpText(false);
+      setPauseVideo(false);
+    } else {
+      setDisplayHelpText(true);
+    }
   };
+
+  const handleTimerPause = () => {
+    setPauseVideo(true);
+  };
+
+  const handleTimerResume = () => {
+    setPauseVideo(false);
+  };
+
+  const helpText = "Please input a time between 1 and 120 minutes";
 
   return (
     <div className={"home-two-container"}>
@@ -57,23 +76,29 @@ export default function HomeTwo() {
           </div>
         </>
       )}
+      {displayHelpText && <p className="highlight-text">{helpText}</p>}
       <CountdownTimer
         expiryTimestamp={expiryTimestamp}
         startTime={timeInput}
         clearValue={handleClearValue}
         renderVideoPlayer={renderVideoPlayer}
         handleTimerStart={handleTimerStart}
+        handleTimerPause={handleTimerPause}
+        handleTimerResume={handleTimerResume}
+        startText={showVideoPlayer ? "Restart" : "Start"}
       />
       <br />
-      {showVideoPlayer && <VideoPlayer autoPlay={autoPlay} />}
+      {showVideoPlayer && (
+        <VideoPlayer autoPlay={autoPlay} pauseVideo={pauseVideo} />
+      )}
       {!showVideoPlayer && (
         <div>
           <h4>
             Input a time to begin, then press{" "}
-            <span style={{ color: "#3a80c7" }}>Start!</span>
+            <span className="highlight-text">Start!</span>
           </h4>
           <h4>
-            Press <span style={{ color: "#3a80c7" }}>Clear</span> to reset
+            Press <span className="highlight-text">Clear</span> to reset
           </h4>
         </div>
       )}

@@ -85,6 +85,10 @@ img {
   z-index: 2;
 }
 
+.highlight-text {
+  color: #3a80c7;
+}
+
 @keyframes logo {
   0% {
     transform: translate(0, -500px);
