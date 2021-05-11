@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import React, { Component } from "react";
-import Card from "reactstrap/lib/Card";
 import HomeTwo from "./HomeTwo";
+import PageTransition from "./PageTransition";
 
 export class Home extends Component {
   static displayName = Home.name;
@@ -30,6 +31,6 @@ export class Home extends Component {
   }
 
   render() {
-    return <HomeTwo handleClear={this.forceUpdate} />;
+    return <HomeTwo />;
   }
 }

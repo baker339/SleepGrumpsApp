@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 import VideoPlayer from "./VideoPlayer";
+import { motion } from "framer-motion";
+import PageTransition from "./PageTransition";
+import PageVariants from "./PageVariants";
 
 export default function HomeTwo() {
   const [timeInput, setTimeInput] = useState(0);
@@ -50,8 +54,16 @@ export default function HomeTwo() {
   const helpText = "Please input a time between 1 and 120 minutes";
 
   return (
-    <div className={"home-two-container"}>
+    <motion.div
+      className={"home-two-container"}
+      initial="initial"
+      animate="in"
+      exit="out"
+      variants={PageVariants}
+      transition={PageTransition}
+    >
       <img
+        className="logo"
         style={{ width: "50%", height: "undefined", justifyContent: "center" }}
         src="https://upload.wikimedia.org/wikipedia/commons/3/38/Game_Grumps_logo_2018.png"
         alt="Game Grumps Logo"
@@ -102,6 +114,10 @@ export default function HomeTwo() {
           </h4>
         </div>
       )}
-    </div>
+      <br />
+      <div>
+        <Link to="/info">Click Here for More Info</Link>
+      </div>
+    </motion.div>
   );
 }
