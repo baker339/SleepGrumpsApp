@@ -44,7 +44,8 @@ code {
 
 body {
   background-image: url("https://wallpapercave.com/wp/wp2274538.jpg");
-  background-size: 180%;
+  width: 100%;
+  height: fit-content;
   text-shadow: darkcyan;
   perspective: 1000px;
 }
