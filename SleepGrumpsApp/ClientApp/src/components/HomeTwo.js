@@ -116,7 +116,9 @@ export default function HomeTwo() {
       )}
       <br />
       <div>
-        <Link to="/info">Click Here for More Info</Link>
+        <Link to="/info">
+          <button className="btn btn-primary">Click Here for More Info</button>
+        </Link>
       </div>
     </motion.div>
   );

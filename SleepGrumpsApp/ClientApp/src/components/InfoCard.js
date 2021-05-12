@@ -223,7 +223,11 @@ export default class InfoCard extends Component {
         </section>
         <br />
         <div>
-          <Link to="/">Back to the Sleep Timer</Link>
+          <button className="btn btn-primary">
+            <Link to="/" style={{ color: "white" }}>
+              Back to the Sleep Timer
+            </Link>
+          </button>
         </div>
       </motion.div>
     );
