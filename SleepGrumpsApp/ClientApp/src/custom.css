@@ -104,3 +104,22 @@ ul.no-bullets {
 p {
   padding-inline: 5%;
 }
+
+.info-text {
+  animation: info-text-animation 200ms ease-in;
+}
+
+@keyframes info-text-animation {
+  0% {
+    opacity: 0;
+    transform: scale(1, 0);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
