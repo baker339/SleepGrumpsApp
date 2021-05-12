@@ -46,7 +46,7 @@ export default class InfoCard extends Component {
     switch (section) {
       case "whyMakeApp":
         this.setState({
-          showWhyMakeApp: true,
+          showWhyMakeApp: !this.state.showWhyMakeApp,
           showResources: false,
           showAboutCreator: false,
         });
@@ -54,7 +54,7 @@ export default class InfoCard extends Component {
       case "resources":
         this.setState({
           showWhyMakeApp: false,
-          showResources: true,
+          showResources: !this.state.showResources,
           showAboutCreator: false,
         });
         break;
@@ -62,7 +62,7 @@ export default class InfoCard extends Component {
         this.setState({
           showWhyMakeApp: false,
           showResources: false,
-          showAboutCreator: true,
+          showAboutCreator: !this.state.showAboutCreator,
         });
         break;
       default:
