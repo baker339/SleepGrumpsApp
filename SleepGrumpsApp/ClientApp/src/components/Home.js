@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import React, { Component } from "react";
 import HomeTwo from "./HomeTwo";
-import PageTransition from "./PageTransition";
 
 export class Home extends Component {
   static displayName = Home.name;
